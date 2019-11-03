@@ -1,6 +1,6 @@
 class Rectangle extends GeometricShape {
-   private double lengthA;
-   private double lengthB;
+    private double lengthA;
+    private double lengthB;
 
     public Rectangle(double lengthA, double lengthB) {
         this.lengthA = lengthA;

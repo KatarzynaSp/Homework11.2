@@ -1,19 +1,23 @@
 public class Test {
     public static void main(String[] args) {
         ShapeCalculator shapeCalculator = new ShapeCalculator();
-        LineCalc lineCalc = new LineCalc();
 
-        Line2D line = new Line2D(4,5,4,5);
-        Circle circle = new Circle(5);
-        Rectangle rectangle = new Rectangle(2, 5);
-        Ball ball = new Ball(5);
-        Cube cube = new Cube(10);
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new Circle(10);
+        shapes[1] = new Cube(10);
+        shapes[2] = new Line2D(1, 1, 2, 2);
 
-
-        System.out.println("Odcinek wyznaczony przez współrzędne [X1, Y1] [X2, Y2] ma długość " + lineCalc.lineLength(line));
-        System.out.println("Koło o długości promienia wynoszącego R ma pole " + shapeCalculator.circleArea(circle) + "m2");
-        System.out.println("Prostokąt o długościach boków A i B ma pole, które wynosi " + shapeCalculator.rectangleArea(rectangle) + "m2");
-        System.out.println("Kula o długości promienia wynoszącego R ma pojemność " + shapeCalculator.ballVolume(ball) + " m3");
-        System.out.println("Sześcian o długości krawędzi wynoszącej A ma pojemność " + shapeCalculator.cubeVolume(cube) + "m3");
+        for (int i = 0; i < shapes.length; i++) {
+            if (shapes[i] instanceof GeometricShape) {
+                GeometricShape geometricShape = (GeometricShape) shapes[i];
+                System.out.println(shapeCalculator.shapeArea(geometricShape));
+            } else if (shapes[i] instanceof Shape3D) {
+                Shape3D shape3D = (Shape3D) shapes[i];
+                System.out.println(shapeCalculator.volume(shape3D));
+            } else if (shapes[i] instanceof Line2D) {
+                Line2D line2D = (Line2D) shapes[i];
+                System.out.println(shapeCalculator.lineLength(line2D));
+            } else System.out.println("to ja już nie wiem co to ma być..");
+        }
     }
 }
