@@ -43,4 +43,3 @@ class Line2D extends Shape2D {
         this.y2 = y2;
     }
 }
-
