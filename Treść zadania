@@ -1,0 +1,37 @@
+Treść zadania
+Na podstawie grafu w następnym pliku, zdefiniuj odpowiednie klasy (oznaczone kolorem pomarańczowym), klasy abstrakcyjne (oznaczone kolorem szarym) oraz interfejsy (oznaczone kolorem niebieskim). Graf prezentuje relacje dziedziczenie. Przykładowo klasa Shape2D dziedziczy po klasie Shape, albo klasa ShapeCalculator implementuje interfejsy Calc2D i Calc3D. Klasy reprezentujące kształty powinny posiadać pola, które pozwolą Ci wyliczyć pola, długość, czy objętość danego kształtu.
+
+Klasa LineCalc powinna posiadać metodę:
+* lineLength(Line2D line) – oblicza i zwraca długość przekazanego jako argument odcinka (wzór na długość odcinka)
+
+Interfejs Calc2D powinien posiadać metody:
+* circleArea(Circle circle) – oblicza i zwraca pole przekazanego jako argument koła (wzór na pole koła)
+* rectangleArea(Rectangle rectangle) – oblicza i zwraca pole przekazanego jako argument prostokąta (wzór na pole prostokąta)
+
+Interfejs Calc3D powinien posiadać metody:
+* ballVolume(Ball ball) – oblicza i zwraca pojemność przekazanej jako argument kuli (wzór na objętość kuli)
+* cubeVolume(Cube cube) – oblicza i zwraca pojemność przekazanego jako argument sześcianu (wzór na objętość sześcianu)
+
+W klasie Main utwórz co najmniej po jednym obiekcie dla każdej klasy reprezentujących różne kształty. Oblicz ich pola, długości lub pojemności oraz wyświetl wyniki obliczeń.
+
+Przykładowy wynik działania programu:
+
+Prostokąt{a=5.0, b=10.0} ma pole 50.0
+Koło{r=8.0} ma pole 201.06192982974676
+Odcinek{x1=0.0, y1=0.0, x2=5.0, y2=5.0} ma długość 7.0710678118654755
+Kula{r=5.0} ma objętość 523.5987755982989
+Sześcian{a=10.0} ma objętość 1000.0
+ 
+********
+Dodatkowe (nieobowiązkowe)
+
+Dokonaj zmian w interfejsach Calc2D i Calc3D tak , aby:
+* Calc2D posiadał tylko jedną metodę shapeArea(GeomtericShape shape) obliczającą pole dowolnego kształtu
+* Calc3D posiadał tylko jedną metodę volume(Shape3D shape) obliczającą pojemność dowolnego kształtu 3D
+
+W klasie Main stwórz tablicę różnych kształtów – linii, kształtów 2D i 3D. W jednej pętli oblicz:
+* długość (jeśli dany kształt to odcinek)
+* pole powierzchni (jeśli dany kształt to figura geometryczna na płaszczyźnie)
+* pojemność (jeśli dany kształt to figura geometryczna w trójwymiarze)
+
+i wyświetl wynik podobnie jak w pierwszej części zadania.
